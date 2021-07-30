@@ -1,14 +1,18 @@
 import Navbar from "./navbar";
 import DiscountOffer from "../components/discountOffer";
 import SearchInput from "../components/searchInput";
+import Categories from "./categories";
+import SentEmail from "../components/sentEmail";
 const Layout = ({ children }) => {
    return (
       <>
          <Navbar />
          <SearchInput />
-         <DiscountOffer />
+         <Categories />
+         {/* <DiscountOffer /> */}
 
          {children}
+         {/* <SentEmail /> */}
       </>
    );
 };
