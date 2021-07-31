@@ -3,7 +3,7 @@ import Card from "../components/card";
 const Home = () => {
    return (
       <>
-         <div className="grid grid-cols-1 lg:grid-cols-2">
+         <div className="grid grid-cols-1 lg:grid-cols-2 bg-blue-50">
             <Card />
             <Card />
          </div>
