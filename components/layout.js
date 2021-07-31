@@ -6,10 +6,10 @@ import SentEmail from "../components/sentEmail";
 const Layout = ({ children }) => {
    return (
       <>
-         <Navbar />
+         {/* <Navbar />
          <SearchInput />
          <Categories />
-         {/* <DiscountOffer /> */}
+         <DiscountOffer /> */}
 
          {children}
          {/* <SentEmail /> */}

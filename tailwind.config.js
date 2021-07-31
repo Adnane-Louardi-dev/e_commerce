@@ -5,8 +5,12 @@ module.exports = {
    theme: {
       extend: {
          fontFamily: {
-            nunito: ["Nunito"],
-            openSans: ["Open Sans"],
+            nunito: ["Nunito", "sans-serif"],
+            openSans: ["Open Sans", "sans-serif"],
+            rubik: ["rubik", "sans-serif"],
+         },
+         screens: {
+            xs: "450px",
          },
       },
    },
