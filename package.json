@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chec/commerce.js": "^2.7.2",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -15,5 +16,20 @@
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
-  }
+  },
+  "name": "e_commerce",
+  "description": "This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adnane-Louardi-dev/e_commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adnane-Louardi-dev/e_commerce/issues"
+  },
+  "homepage": "https://github.com/Adnane-Louardi-dev/e_commerce#readme"
 }

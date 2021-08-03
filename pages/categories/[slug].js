@@ -1,14 +1,15 @@
 import commerce from "../../lib/commerce";
 import Card from "../../components/card";
+import Categories from "../../components/categories";
 import Head from "next/head";
 import Link from "next/link";
 export default function Categoriespage({ products }) {
-   // const { slug } = params;
    return (
       <>
          <Head>
-            <title>{`Edona-saws`}</title>
+            <title>{`Edona | ${products[0].categories[0].name}`}</title>
          </Head>
+         <Categories />
          {products.map((product) => (
             <>
                <div className="mx-auto my-7" key={product.id}>

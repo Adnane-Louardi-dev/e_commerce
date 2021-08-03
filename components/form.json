@@ -1,0 +1,141 @@
+{
+   "id": "prod_A12JwreJ28lPjn",
+   "created": 1627759754,
+   "updated": 1627760404,
+   "active": true,
+   "permalink": "956HNV",
+   "name": "Circular Saw Battery Charging",
+   "description": "<p>Circular saw used to cut the wood boards, frames etc. It is used when accurate cutting is required in less time. It is safer than hand saw.</p>",
+   "price": {
+      "raw": 70,
+      "formatted": "70.00",
+      "formatted_with_symbol": "DH70.00",
+      "formatted_with_code": "70.00 MAD"
+   },
+   "inventory": {
+      "managed": true,
+      "available": 1
+   },
+   "media": {
+      "type": "image",
+      "source": "https://cdn.chec.io/merchants/31148/assets/iLYvoPuCwEtXkKUY|circular-saw3.jpg"
+   },
+   "sku": null,
+   "sort_order": 0,
+   "seo": {
+      "title": "Circular Saw Battery Charging",
+      "description": null
+   },
+   "thank_you_url": null,
+   "meta": null,
+   "conditionals": {
+      "is_active": true,
+      "is_tax_exempt": false,
+      "is_pay_what_you_want": false,
+      "is_inventory_managed": true,
+      "is_sold_out": false,
+      "has_digital_delivery": false,
+      "has_physical_delivery": false,
+      "has_images": true,
+      "has_video": false,
+      "has_rich_embed": false,
+      "collects_fullname": true,
+      "collects_shipping_address": true,
+      "collects_billing_address": false,
+      "collects_extra_fields": false
+   },
+   "is": {
+      "active": true,
+      "tax_exempt": false,
+      "pay_what_you_want": false,
+      "inventory_managed": true,
+      "sold_out": false
+   },
+   "has": {
+      "digital_delivery": false,
+      "physical_delivery": false,
+      "images": true,
+      "video": false,
+      "rich_embed": false
+   },
+   "collects": {
+      "fullname": true,
+      "shipping_address": true,
+      "billing_address": false,
+      "extra_fields": false
+   },
+   "checkout_url": {
+      "checkout": "https://checkout.chec.io/956HNV?checkout=true",
+      "display": "https://checkout.chec.io/956HNV"
+   },
+   "extra_fields": [],
+   "variant_groups": [],
+   "categories": [
+      {
+         "id": "cat_Op1YoVz8DoXLv9",
+         "slug": "saw",
+         "name": "Saw"
+      },
+      {
+         "id": "cat_4WJvlK9E9obYV1",
+         "slug": "circular-saw",
+         "name": "Circular Saw"
+      }
+   ],
+   "assets": [
+      {
+         "id": "ast_4WJvlKObxelbYV",
+         "url": "https://cdn.chec.io/merchants/31148/assets/iLYvoPuCwEtXkKUY|circular-saw3.jpg",
+         "description": null,
+         "is_image": true,
+         "filename": "circular-saw3.jpg",
+         "file_size": 24452,
+         "file_extension": "jpg",
+         "image_dimensions": {
+            "width": 612,
+            "height": 408
+         },
+         "meta": [],
+         "created_at": 1627760381,
+         "updated_at": 1627760391
+      }
+   ],
+   "related_products": [
+      {
+         "id": "prod_Op1YoVp176lXLv",
+         "name": "Circular Saw",
+         "sku": null,
+         "permalink": "Olpclm",
+         "description": "<p>Circular saw used to cut the wood boards, frames etc. It is used when accurate cutting is required in less time. It is safer than hand saw.</p>",
+         "price": {
+            "raw": 55,
+            "formatted": "55.00",
+            "formatted_with_symbol": "DH55.00",
+            "formatted_with_code": "55.00 MAD"
+         },
+         "quantity": 5,
+         "media": {
+            "type": "image",
+            "source": "https://cdn.chec.io/merchants/31148/assets/U9yvrmKRaEbuHqvi|circular-saw1.jpg"
+         }
+      },
+      {
+         "id": "prod_8XO3wpW1ZNlYAz",
+         "name": "Circular Saw For Wood",
+         "sku": null,
+         "permalink": "Vigdt5",
+         "description": "<p>Circular saw used to cut the wood boards, frames etc. It is used when accurate cutting is required in less time. It is safer than hand saw.</p>",
+         "price": {
+            "raw": 55,
+            "formatted": "55.00",
+            "formatted_with_symbol": "DH55.00",
+            "formatted_with_code": "55.00 MAD"
+         },
+         "quantity": 2,
+         "media": {
+            "type": "image",
+            "source": "https://cdn.chec.io/merchants/31148/assets/YE44dCLIHtPeP8pB|circular-saw2.jpg"
+         }
+      }
+   ]
+}

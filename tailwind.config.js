@@ -10,7 +10,7 @@ module.exports = {
             rubik: ["rubik", "sans-serif"],
          },
          screens: {
-            xs: "450px",
+            xs: "500px",
          },
       },
    },
