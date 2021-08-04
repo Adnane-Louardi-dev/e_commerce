@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 const Card = ({ name, price, media }) => {
    return (
-      <div className="mx-auto xs:flex max-w-xl rounded-xl shadow-md bg-gray-100 p-3 xs:px-3">
+      <div className="mx-auto my-5 xs:flex max-w-xl rounded-xl shadow-md bg-blue-50 p-3 xs:px-3">
          <div className="self-center relative h-36 md:h-40 w-full xs:w-48 flex-shrink-0 rounded-xl overflow-hidden bg-gray-400">
             {/* <Carousel emulateTouch={true} showArrows={false} showThumbs={false} transitionTime={750} centerMode={true} centerSlidePercentage={100}> */}
             <Image src={media.source} layout="fill" objectFit="cover" alt={name} />
