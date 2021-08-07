@@ -2,19 +2,14 @@ import commerce from "../lib/commerce";
 import Card from "../components/card";
 import Categories from "../components/categories";
 import Link from "next/link";
-const Home = ({ products, categories }) => {
+const Home = ({ products }) => {
    return (
       <>
          <Categories />
          <div className="grid grid-cols-1 lg:grid-cols-2">
             {products.map((product) => (
-               // <Link href={`/products/${product.permalink}`} key={product.permalink} passHref={true}>
-               <a key={product.permalink}>
-                  <Card {...product} />
-               </a>
-               // </Link>
+               <Card {...product} key={product.id} />
             ))}
-            {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
          </div>
       </>
    );

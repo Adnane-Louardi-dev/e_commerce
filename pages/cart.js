@@ -24,9 +24,6 @@ const Cart = () => {
                      <b className="capitalize cursor-pointer"> go shopping!!</b>
                   </Link>
                </span>
-               <button className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none">
-                  <span>×</span>
-               </button>
             </div>
          )}
          <div className="flex flex-col my-14 mx-10 font-rubik noScrollbar">

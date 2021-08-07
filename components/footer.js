@@ -42,7 +42,7 @@ export default function Footer() {
                      </span>
                   </div>
                   <div className="flex flex-col">
-                     <span className="font-bold text-gray-100 uppercase mt-4 md:mt-0 mb-2">Other pages</span>
+                     <span className="font-bold text-gray-100 uppercase mt-4 md:mt-0 mb-2">Company</span>
                      <span className="my-2">
                         <Link href="/contact">
                            <a className="text-yellow-500  text-md hover:text-yellow-400">Contact us</a>
