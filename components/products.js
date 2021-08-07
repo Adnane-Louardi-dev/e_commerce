@@ -55,7 +55,7 @@ export default function Product({ name, price, media, description, inventory }) 
             {/*---- subbar ----*/}
             <div className="fixed bottom-0 left-0 right-0 m-5 px-5 py-4 h-16 rounded-2xl bg-gray-200 shadow-lg font-nunito">
                <div className="flex justify-between">
-                  <button type="submit" className="inline-flex h-10 w-24 text-white bg-gray-500 hover:bg-gray-400 px-3 py-2 rounded-md">
+                  <button type="submit" className=" hidden sm:inline-flex h-10 w-24 text-white bg-gray-500 hover:bg-gray-400 px-3 py-2 rounded-md">
                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 my-0.5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                      </svg>
