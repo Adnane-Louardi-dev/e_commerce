@@ -1,7 +1,17 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from "react-responsive-carousel";
+import Commerce from "@chec/commerce.js";
 import Image from "next/image";
-const Card = ({ name, price, media }) => {
+const Card = ({ name, price, media, id }) => {
+   const addToCart = () => {
+      const commerce = new Commerce("pk_test_311488271be695cf3e21135b90bc2ae443ea66b83d5aa");
+      commerce.cart.add(id, 1).then(() => (
+         <div class="fixed bottom-0 left-0 bg-yellow-400 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+            <p class="font-bold">Product added</p>
+            <p>Check the cart to complete the steps.</p>
+         </div>
+      ));
+   };
    return (
       <div className="mx-auto my-5 xs:flex max-w-xl rounded-xl shadow-md bg-blue-50 p-3 xs:px-3">
          <div className="self-center relative h-36 md:h-40 w-full xs:w-48 flex-shrink-0 rounded-xl overflow-hidden bg-gray-400">
@@ -28,7 +38,7 @@ const Card = ({ name, price, media }) => {
                </div>
             </div>
             <div className="flex justify-end w-full">
-               <button className="mx-0.5 bg-yellow-400 hover:bg-yellow-500 focus:bg-yellow-500 focus:ring-2 focus:ring-red-500 w-10 h-10 rounded-md">
+               <button onClick={addToCart} className="mx-0.5 bg-yellow-400 hover:bg-yellow-500 focus:bg-yellow-500 focus:ring-2 focus:ring-red-500 w-10 h-10 rounded-md">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mx-auto my-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
