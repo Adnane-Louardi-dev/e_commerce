@@ -2,6 +2,7 @@ import Commerce from "@chec/commerce.js";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const Cart = () => {
    const [products, setProducts] = useState([]);
@@ -13,8 +14,11 @@ const Cart = () => {
 
    return (
       <>
+         <Head>
+            <title>Your cart</title>
+         </Head>
          {products.length === 0 && (
-            <div className="text-white px-6 py-4 my-16 mx-5 border-0 rounded relative bg-yellow-500">
+            <div className="text-white px-6 py-4 my-28 mx-5 border-0 rounded relative bg-yellow-500">
                <span className="text-xl inline-block mr-5 align-middle">
                   <i className="fas fa-bell" />
                </span>
@@ -37,7 +41,7 @@ const Cart = () => {
                                  Product name
                               </th>
                               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
-                                 Description
+                                 Price
                               </th>
                               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                  Status
@@ -76,9 +80,9 @@ const Cart = () => {
                                           })
                                        );
                                     }}
-                                    className="px-6 py-4 whitespace-nowrap text-right text-md font-medium bg-red-400 rounded-lg cursor-pointer"
+                                    className="py-4 px-6 whitespace-nowrap text-center text-md font-medium rounded-lg cursor-pointer"
                                  >
-                                    <a className="text-white">Remove</a>
+                                    <a className="text-red-400 ">Remove</a>
                                  </td>
                               </tr>
                            </tbody>
