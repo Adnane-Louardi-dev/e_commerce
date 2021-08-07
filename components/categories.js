@@ -3,7 +3,7 @@ import Link from "next/link";
 const Categories = () => {
    return (
       <div className="my-3 px-3 overflow-hidden font-rubik">
-         <h1 className="text-2xl">Categories</h1>
+         <h1 className="text-2xl mt-5">Categories</h1>
 
          <div className={`noScrollbar my-5 flex overflow-x-scroll`}>
             <Link href="/" passHref={true}>

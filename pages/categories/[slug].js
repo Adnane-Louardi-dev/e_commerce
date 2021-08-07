@@ -12,15 +12,13 @@ export default function Categoriespage({ products }) {
          <Categories />
          <div className="grid grid-cols-1 lg:grid-cols-2">
             {products.map((product) => (
-               <>
-                  <div className="mx-auto my-7" key={product.id}>
-                     <Link href={`/products/${product.permalink}`} passHref={true}>
-                        <a>
-                           <Card {...product} />
-                        </a>
-                     </Link>
-                  </div>
-               </>
+               <div className="mx-auto my-7" key={product.id}>
+                  <Link href={`/products/${product.permalink}`} passHref={true}>
+                     <a>
+                        <Card {...product} />
+                     </a>
+                  </Link>
+               </div>
             ))}
          </div>
       </>

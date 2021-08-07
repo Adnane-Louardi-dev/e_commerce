@@ -8,11 +8,11 @@ const Home = ({ products, categories }) => {
          <Categories />
          <div className="grid grid-cols-1 lg:grid-cols-2">
             {products.map((product) => (
-               <Link href={`/products/${product.permalink}`} key={product.permalink} passHref={true}>
-                  <a>
-                     <Card {...product} />
-                  </a>
-               </Link>
+               // <Link href={`/products/${product.permalink}`} key={product.permalink} passHref={true}>
+               <a key={product.permalink}>
+                  <Card {...product} />
+               </a>
+               // </Link>
             ))}
             {/* <pre>{JSON.stringify(categories, null, 2)}</pre> */}
          </div>
