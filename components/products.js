@@ -1,8 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function Product({ name, price, media, description, inventory }) {
+import Commerce from "@chec/commerce.js";
+import React, { useState } from "react";
+export default function Product({ name, price, media, description, inventory, id }) {
+   const [added, setAdded] = useState(false);
+   const addToCart = () => {
+      const commerce = new Commerce("pk_test_311488271be695cf3e21135b90bc2ae443ea66b83d5aa");
+      commerce.cart.add(id, 1).then(() => {
+         let beggin = setInterval(() => {
+            setAdded(true);
+            setTimeout(() => {
+               setAdded(false);
+               clearInterval(beggin);
+            }, 5000);
+         }, 0);
+      });
+   };
    return (
       <>
+         {added && (
+            <div className="fixed z-10  ml-3 mt-3 rounded-lg top-0 left-0 bg-yellow-400 p-4 font-rubik" role="alert">
+               <p>Added to your cart!!</p>
+               <p>
+                  Check
+                  <Link href="/cart">
+                     <b className="capitalize cursor-pointer"> the cart </b>
+                  </Link>
+                  to complete your order.
+               </p>
+            </div>
+         )}
          <div className="h-screen relative">
             {/*---- top navbar ----*/}
             <div className="flex justify-between m-5 px-5 py-4 h-16 rounded-2xl bg-gray-200 shadow-lg">
@@ -35,7 +62,7 @@ export default function Product({ name, price, media, description, inventory }) 
                      <div className="font-nunito">
                         <h1 className="text-3xl ">{name}</h1>
                      </div>
-                     <div className="flex rounded-md shadow-md bg-blue-200 px-2 h-10">
+                     <div className="hidden sm:flex rounded-md shadow-md bg-blue-200 px-2 h-10">
                         <div className="mt-1 text-lg mr-1 whitespace-nowrap">{`${inventory.available} available`}</div>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnssvgjs="http://svgjs.com/svgjs" version="1.1" width="16" height="16" className="mt-2.5" x="0" y="0" viewBox="0 0 512 512" style={{ enableBackground: "new 0 0 512 512" }} xmlSpace="preserve">
                            <g>
@@ -46,7 +73,7 @@ export default function Product({ name, price, media, description, inventory }) 
                      </div>
                   </div>
 
-                  <div className="text-gray-500 font-openSans">
+                  <div className="text-gray-500 font-openSans ">
                      <p className="leading-7">{description.replace(/(<([^>]+)>)/gi, "")}</p>
                   </div>
                </div>
@@ -54,22 +81,22 @@ export default function Product({ name, price, media, description, inventory }) 
             {/*----  ----*/}
             {/*---- subbar ----*/}
             <div className="fixed bottom-0 left-0 right-0 m-5 px-5 py-4 h-16 rounded-2xl bg-gray-200 shadow-lg font-nunito">
-               <div className="flex justify-between">
+               <div className="flex justify-center sm:justify-between">
                   <button type="submit" className=" hidden sm:inline-flex h-10 w-24 text-white bg-gray-500 hover:bg-gray-400 px-3 py-2 rounded-md">
                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 my-0.5 mr-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                      </svg>
                      <span>Share</span>
                   </button>
-                  <div className="inline-flex">
+                  <div className="inline-flex justify-center">
                      <div className="px-3 py-1 text-blue-700">
-                        <h1 className="text-md sm:text-xl mt-0.5 whitespace-nowrap">{price.formatted_with_code}</h1>
+                        <h1 className="text-xl mt-0.5 whitespace-nowrap">{price.formatted_with_code}</h1>
                      </div>
-                     <button type="submit" className="inline-flex text-white h-10 w-32 bg-yellow-500 hover:bg-yellow-400 hover:text-gray-100 px-3 py-2 rounded-md">
+                     <button onClick={addToCart} type="submit" className="inline-flex text-white h-10 w-32 bg-yellow-500 hover:bg-yellow-400 hover:text-gray-100 px-3 py-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 my-0.5 mr-0.5" viewBox="0 0 20 20" fill="currentColor">
                            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-md sm:text-xl whitespace-nowrap">Add to cart</span>
+                        <span className="text-md whitespace-nowrap">Add to cart</span>
                      </button>
                   </div>
                </div>
