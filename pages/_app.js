@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Head from "next/head";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import "nprogress/customColor.css";
+import "../public/customColor.css";
 import Router from "next/router";
 
 //hide loading nprogress spinner
