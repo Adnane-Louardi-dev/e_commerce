@@ -63,13 +63,13 @@ export default function Product({ name, price, media, description, inventory }) 
                   </button>
                   <div className="inline-flex">
                      <div className="px-3 py-1 text-blue-700">
-                        <h1 className="text-xl mt-0.5">{price.formatted_with_code}</h1>
+                        <h1 className="text-md sm:text-xl mt-0.5">{price.formatted_with_code}</h1>
                      </div>
                      <button type="submit" className="inline-flex text-white h-10 w-32 bg-yellow-500 hover:bg-yellow-400 hover:text-gray-100 px-3 py-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 my-0.5 mr-0.5" viewBox="0 0 20 20" fill="currentColor">
                            <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
                         </svg>
-                        <span>Add to cart</span>
+                        <span className="text-md sm:text-xl">Add to cart</span>
                      </button>
                   </div>
                </div>
