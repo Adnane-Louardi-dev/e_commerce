@@ -66,7 +66,7 @@ export default function Footer() {
             <div className="mt-16 border-t-1 border-gray-200 flex flex-col items-center">
                <div className="sm:w-2/3 text-center py-6">
                   <p className="text-sm text-white font-bold mb-2">
-                     <Link href="https://adnane-louardi.vercel.com">
+                     <Link href="https://adnane-louardi.vercel.app">
                         <a>
                            © 2021 by <span className="text-yellow-500  text-md hover:text-yellow-400">Adnane LOUARDI</span>
                         </a>
